@@ -70,9 +70,7 @@ const socketSetup = (app) => {
     io.on('connection', (socket) => {
         console.log('a user connected');
 
-        /* Here is where we automatically put all new users into
-           the general room.
-        */
+        /* Here we automatically put all new users into the general room. */
         socket.join('general');
 
         socket.on('disconnect', () => {
