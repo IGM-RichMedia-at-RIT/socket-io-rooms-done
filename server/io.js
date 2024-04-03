@@ -40,7 +40,7 @@ const handleChatMessage = (socket, msg) => {
            is the same as their ID. For this, we want to ignore that
            room, so we will skip over it.
         */
-        if(room == socket.id) return; 
+        if(room === socket.id) return; 
 
         io.to(room).emit('chat message', msg);
     });
@@ -56,7 +56,7 @@ const handleChatMessage = (socket, msg) => {
 */
 const handleRoomChange = (socket, roomName) => {
     socket.rooms.forEach(room => {
-        if(room == socket.id) return; 
+        if(room === socket.id) return; 
         socket.leave(room);
     });
     socket.join(roomName);
