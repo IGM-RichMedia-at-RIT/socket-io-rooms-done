@@ -1,5 +1,8 @@
 const hostIndex = (req, res) => {
   res.render('index');
+
+  //Database Request
+  //Add that to page with render
 };
 
 const notFound = (req, res) => {

@@ -74,6 +74,9 @@ const handleChannelSelect = () => {
 }
 
 const init = () => {
+    socket.on('getLeaderboardData', (data) => { /* code that displays the data */ });
+    socket.emit('getLeaderboardData');
+
     handleEditBox();
 
     /* Rather than listen to general or memes like we did in
